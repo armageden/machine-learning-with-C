@@ -8,8 +8,9 @@ float train[][2]={
     {0,0},
     {1,2},
     {2,4},
+    {3,6},
     {4,8},
-    {5,10}
+    
 };
 
 #define train_count (sizeof(train)/sizeof(train[0]))
@@ -27,7 +28,8 @@ int main(){
     for(size_t i=0;i<train_count;i++){
         float x=train [i][0];
         float y=x*w;
-        printf("Actual: %f, Expected: %f\n",y,train[i][0]);
+        
+        printf("Actual: %f, Expected: %f\n",y,train[i][1]);
     }
 
     return 0;
