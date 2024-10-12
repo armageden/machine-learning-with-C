@@ -1,4 +1,5 @@
 #include <complex.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -20,18 +21,31 @@ float cost(float w) {
     float y = x * w;
     float d = y - train[i][1];
     result += d * d;
-   
-  } result /= train_count;
-    return result;
-}
-  int main() {
-    // srand(time(0));
-    srand(69);
-    // c=a*b
-    float w = rand_float() * 10.0f;
-
-    // printf("Actual: %f, Expected: %f\n", y, train[i][1]);
-
-    printf("%f\n", cost(w));
-    return 0;
   }
+  result /= train_count;
+  return result;
+}
+int main() {
+  // srand(time(0));
+  srand(69);
+  // c=a*b
+  float w = rand_float() * 10.0f;
+
+  // printf("Actual: %f, Expected: %f\n", y, train[i][1]);
+  float eps = 1e-3;
+  float rate=1e-3;// learning rate
+  printf("%f\n", cost(w));
+  for (size_t i=0;i<500;++i){
+ float dcost = (cost(w + eps) - cost(w)) / eps;
+//   printf("%f\n", cost(w));
+  
+  w-=rate*dcost;
+  printf("cost= %f,w= %f\n", cost(w),w);
+  }
+  // distance of the cost function
+  printf("-----------------------------------------------\n");
+  printf("%f\n", w);
+//   printf("%f\n", cost(w - eps));
+//   printf("%f\n", cost(w - eps * 2));
+  return 0;
+}
