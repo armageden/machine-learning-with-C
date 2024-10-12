@@ -2,9 +2,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+// #include <time.h>
 
-// this the training data for say...
+// this is the training data for say...
 float train[][2] = {
     {0, 0}, {1, 2}, {2, 4}, {3, 6}, {4, 8},
 
