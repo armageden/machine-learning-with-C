@@ -55,4 +55,3 @@ int main() {
   //   printf("%f\n", cost(w - eps * 2));
   return 0;
 }
-//done simgle brain cell model done!!!!!
