@@ -8,9 +8,16 @@
 float sigmoidf(float x) { return 1.f / (1.f + expf(-x)); }
 // OR-gate
 // this is the training data for say...
-float train[][3] = {{0, 0, 0}, {1, 0, 1}, {0, 1, 1}, {1, 1, 1}};
+// float train[][3] = {{0, 0, 0}, {1, 0, 1}, {0, 1, 1}, {1, 1, 1}};
 
-#define train_count (sizeof(train) / sizeof(train[0]))
+//AND-gate
+// float train[][3] = {{0, 0, 0}, {1, 0, 0}, {0, 1, 0}, {1, 1, 1}};
+
+//NAND-gate
+float train[][3] = {{0, 0, 1}, {1, 0, 1}, {0, 1, 1}, {1, 1, 0}};
+
+#define train_count (sizeof(train) / sizeof(train[0])) // this is for AND, NAND, OR gates but XOR needs another method using these three methods together...
+
 
 // cost function
 float cost(float w1, float w2, float bias) {
@@ -51,7 +58,7 @@ int main(void) {
 
   for (size_t i = 0; i < 2; ++i) {
     for (size_t j = 0; j < 2; ++j) {
-      printf("%zu | %zu = %f\n", i, j, sigmoidf(i * w1 + j * w2));
+      printf("%zu | %zu = %f\n", i, j, sigmoidf(i * w1 + j * w2+bias));
     }
   }
   return 0;
