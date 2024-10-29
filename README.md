@@ -41,10 +41,23 @@ Welcome to **Machine Learning with C**! This project explores foundational machi
 ```plaintext
 machine-learning-with-C
 ├── README.md         # Project documentation
-├── main.c            # Main program file
-├── neuron.c          # Neuron logic implementation
-├── gates.c           # Logic gate implementations (OR, AND, NAND)
-└── utils.h           # Header file with utility functions
+│   └── Updated with new features and usage examples
+│   └── Oct 29, 2024: Update README.md
+├── build.sh          # Script to compile the project
+│   └── Oct 29, 2024: Xor gate finished with full operationality
+├── gates/            # Directory for gate implementations
+│   └── Oct 17, 2024: Made OR, AND, NAND gates workable with single neuron
+├── gates.c           # Core logic for OR, AND, NAND gates
+│   └── Oct 17, 2024: Made OR, AND, NAND gates workable with single neuron
+├── twice/            # Directory for twin neuron and OR-gate functions
+│   └── Oct 16, 2024: Added OR-gate and twin neuron functionality with minor fixes
+├── twice.c           # Logic for twin neurons and OR-gate functions
+│   └── Oct 16, 2024: Added OR-gate and twin neuron functionality with minor fixes
+├── xor/              # Directory for XOR gate implementation
+│   └── Oct 29, 2024: XOR gate finished with full operationality
+├── xor.c             # XOR gate logic
+│   └── Oct 29, 2024: XOR gate finished with full operationality
+
 
 ```
 # 🎯 Future Work
