@@ -15,19 +15,30 @@ Welcome to **Machine Learning with C**! This project is a foundational explorati
 
 ## Introduction
 
-This project demonstrates the basics of machine learning concepts using C. We start with creating single neurons and then proceed to more complex structures, such as double neurons and simple logic gates (OR, AND, NAND). Each implementation is modular, allowing for easy extension and experimentation with different gate combinations.
+# 🧠 Machine Learning with C
 
-## Features
+![C](https://img.shields.io/badge/Language-C-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Contributions](https://img.shields.io/badge/Contributions-Welcome-orange.svg)
 
-- **Single Neuron Implementation**: Build single neurons to understand the fundamentals of neuron processing.
-- **Double Neuron Implementation**: Explore more complex neural structures with paired neurons.
-- **Logic Gates**:
-  - **OR Gate**: Allows logical OR operations.
-  - **AND Gate**: Performs logical AND operations.
-  - **NAND Gate**: Complements the AND gate.
-  - **Compatibility Mode**: The OR gate implementation can be used with all other gates, providing a flexible model for testing various combinations.
+Welcome to **Machine Learning with C**! This project explores foundational machine learning concepts using the C programming language. By implementing single and double neurons and logic gates like OR, AND, and NAND, this repository serves as an accessible introduction to neural computation and logical reasoning in machine learning.
 
-# Project Structure:
+---
+
+## 🌟 Features
+
+- 🧩 **Single Neuron Implementation**: Basics of neuron processing in C
+- ⚡ **Double Neuron Implementation**: Two-neuron models for extended applications
+- 🔌 **Logic Gates**:
+  - **OR Gate**: Logical OR operations
+  - **AND Gate**: Logical AND operations
+  - **NAND Gate**: Complementary to AND logic
+  - **Compatibility Mode**: Use OR gates alongside AND and NAND for flexibility and experimentation
+
+---
+# 📂 Project Structure
+
+```plaintext
 machine-learning-with-C
 ├── README.md         # Project documentation
 ├── main.c            # Main program file
@@ -35,17 +46,18 @@ machine-learning-with-C
 ├── gates.c           # Logic gate implementations (OR, AND, NAND)
 └── utils.h           # Header file with utility functions
 
-# Future Work
+```
+# 🎯 Future Work
 
     Implement more complex neural networks
     Expand gate compatibility testing for multi-layered logic gates
     Add support for additional machine learning concepts, such as XOR gate and simple backpropagation
 
-# Contributing
+# 🤝 Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or feature additions.
 
-# License
+# 📄 License
 
 This project is licensed under the MIT License. See LICENSE for details.
 
