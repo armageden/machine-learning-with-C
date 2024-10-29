@@ -28,8 +28,8 @@ This project demonstrates the basics of machine learning concepts using C. We st
   - **Compatibility Mode**: The OR gate implementation can be used with all other gates, providing a flexible model for testing various combinations.
 
 # Project Structure:
-machine-learning-with-C\n
-├── README.md         # Project documentation\n
+machine-learning-with-C
+├── README.md         # Project documentation
 ├── main.c            # Main program file
 ├── neuron.c          # Neuron logic implementation
 ├── gates.c           # Logic gate implementations (OR, AND, NAND)
