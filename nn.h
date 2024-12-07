@@ -10,12 +10,14 @@
 // Mat di={.rows=4, .cols=2 ,.stride=3 .es=&d[0]};
 // Mat do={.rows=4, .cols=1 ,.stride=3 .es=&d[3]};
 #include <stddef.h>
-#ifdef NN_MALLOC
+#include <stdio.h>
+
+#ifndef NN_MALLOC
 #include <stdlib.h>
 #define NN_MALLOC malloc
 #endif // NN_MALLOC
 
-#ifdef  NN_ASSERT
+#ifndef NN_ASSERT
 #include <assert.h>
 #define NN_ASSERT assert
 #endif // NN_ASSERT
@@ -25,14 +27,16 @@ typedef struct {
   float *es;
 } Mat;
 
-Mat mat_alloc(size_t rows, size_t cols) {
-  void mat_dot(Mat dst, Mat a, Mat b);
-  void mat_sum(Mat dst, Mat a);
-  void mat_print();
-}
+#define MAT_AT(m, i, j) (m).es[(i) * (m).cols + (j)]
+
+Mat mat_alloc(size_t rows, size_t cols);
+void mat_rand(Mat m);
+void mat_dot(Mat dst, Mat a, Mat b);
+void mat_sum(Mat dst, Mat a);
+void mat_print(Mat m);
 #endif // NN_H_
 
-#ifdef NN_IMPLIMENTATION
+#ifndef NN_IMPLIMENTATION
 Mat mat_alloc(size_t rows, size_t cols) {
   Mat m;
   m.rows = rows;
@@ -50,12 +54,15 @@ void mat_sum(Mat dst, Mat a) {
   (void)dst;
   (void)a;
 }
+
 void mat_print(Mat m) {
 
-  for (size_t i=0;i<m.rows;++i){
-    for (size_t j=0;j<m.rows;++i)
+  for (size_t i = 0; i < m.rows; ++i) {
+    for (size_t j = 0; j < m.cols; ++j) {
+      printf("%f ", MAT_AT(m, i, j));
+    }
+    printf("\n");
   }
-  (void) m;
 }
 
 #endif // NN_IMPLIMENTATION
