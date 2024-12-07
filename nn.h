@@ -50,6 +50,12 @@ void mat_sum(Mat dst, Mat a) {
   (void)dst;
   (void)a;
 }
-void mat_print(void) {}
+void mat_print(Mat m) {
+
+  for (size_t i=0;i<m.rows;++i){
+    for (size_t j=0;j<m.rows;++i)
+  }
+  (void) m;
+}
 
 #endif // NN_IMPLIMENTATION
