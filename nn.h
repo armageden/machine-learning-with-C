@@ -65,4 +65,11 @@ void mat_print(Mat m) {
   }
 }
 
+void mat_rand(Mat m) {
+  for (size_t i = 0; i < m.rows; ++i) {
+    for (size_t j = 0; j < m.cols; ++j) {
+    }
+  }
+}
+
 #endif // NN_IMPLIMENTATION
